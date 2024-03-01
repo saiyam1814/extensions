@@ -1,0 +1,10 @@
+version: v1alpha1
+metadata:
+  name: crictl
+  version: "$VERSION"
+  author: Saiyam Pathak
+  description: |
+    This system extension provides crictl config changes
+  compatibility:
+    talos:
+      version: ">= v1.0.0"

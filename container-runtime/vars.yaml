@@ -6,3 +6,6 @@ STARGZ_SNAPSHOTTER_VERSION: v0.15.1
 CLOUD_PROVIDER_AWS_VERSION: v1.28.1
 # renovate: datasource=github-tags depName=containerd/runwasi
 WASMEDGE_VERSION: v0.3.0
+
+CRICTL_VERSION: v0.0.1
+

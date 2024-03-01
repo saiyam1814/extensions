@@ -1,0 +1,23 @@
+name: crictl
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+  - stage: base
+steps:
+  - prepare:
+      - |
+        sed -i 's#$VERSION#{{ .VERSION }}#' /pkg/manifest.yaml
+    install:
+      - |
+        mkdir -p /rootfs/etc
+ 
+         # Write the crictl configuration to the file
+        cat << EOF > /rootfs/etc/crictl.yaml
+        runtime-endpoint: "unix:///run/containerd/containerd.sock"
+        timeout: 0
+        EOF
+finalize:
+  - from: /rootfs
+    to: /rootfs
+  - from: /pkg/manifest.yaml
+    to: /

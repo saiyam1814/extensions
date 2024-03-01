@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2024-02-02T14:30:15Z by kres latest.
+# Generated on 2024-03-01T05:50:48Z by kres latest.
 
 # common variables
 
@@ -16,7 +16,7 @@ ifeq ($(GOARCH),x86_64)
   GOARCH := amd64
 endif
 REGISTRY ?= ghcr.io
-USERNAME ?= siderolabs
+USERNAME ?= saiyam1814
 REGISTRY_AND_USERNAME ?= $(REGISTRY)/$(USERNAME)
 KRES_IMAGE ?= ghcr.io/siderolabs/kres:latest
 CONFORMANCE_IMAGE ?= ghcr.io/siderolabs/conform:latest
@@ -80,6 +80,7 @@ TARGETS += usb-modem-drivers
 TARGETS += util-linux-tools
 TARGETS += v4l-uvc-drivers
 TARGETS += wasmedge
+TARGETS += crictl
 TARGETS += xe-guest-utilities
 NONFREE_TARGETS = nonfree-kmod-nvidia
 
